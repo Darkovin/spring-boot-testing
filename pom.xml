@@ -57,7 +57,22 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<releaseProfiles>releases</releaseProfiles>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
+	<scm>
+		<connection>scm:git:git@github.com:Darkovin/spring-boot-testing.git</connection>
+		<url>scm:git:git@github.com:Darkovin/spring-boot-testing.git</url>
+		<developerConnection>scm:git:git@github.com:Darkovin/spring-boot-testing.git</developerConnection>
+	</scm>
 </project>
